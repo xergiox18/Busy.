@@ -58,27 +58,35 @@
                     </div>
 
                     <div class="padding-30px background-white border-1 border-grey-1">
-                        <form>
+      
+                        <form method="POST">
+                        <?php
+                            include "modelo/conexion.php";
+                            include "controlador/login.php";
+                            include "controlador/login_conductor.php";
+                            ?>
+                            
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-form-label"><strong>Correo electronico</strong></label>
-                                <input type="email" class="form-control rounded-0" id="inputEmail3" placeholder="Email">
+                                <input type="email"  class="form-control rounded-0" id="inputEmail3" placeholder="Email" name="correo" required>
                             </div>
                             <div class="form-group">
+                        
                                 <label for="inputPassword3" class="col-form-label"><strong>Contraseña</strong></label>
-                                <input type="password" class="form-control rounded-0" id="inputPassword3" placeholder="Password">
+                                <input type="password" class="form-control rounded-0" id="inputPassword3" placeholder="Password" name="contraseña" required>
                             </div>
                             <div class="form-group ">
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                      <input class="form-check-input" type="checkbox"> Recuerdar cuenta
+                                      <input class="form-check-input" type="checkbox"> Recordar cuenta
                                     </label>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <a href="perfil-admin.html" class="btn btn-primary btn-block rounded-0 background-main-color">Iniciar sesión como admin</a>
+                                <button type="submit"   class="btn btn-primary btn-block rounded-0 background-main-color" name="btningresar" value="INICIAR SESION" >Iniciar sesión como admin</button>
                             </div>
                             <div class="form-group">
-                                <a href="perfil_conductores.html" class="btn btn-primary btn-block rounded-0 background-main-color">Iniciar sesión como conductor</a>
+                            <button type="submit"   class="btn btn-primary btn-block rounded-0 background-main-color" name="btniniciar" value="INICIAR SESION" >Iniciar sesión como conductor</button>
                             </div>
                         </form>
                     </div>

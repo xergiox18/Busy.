@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
+<?php?>
 <head>
     <title>Travelz HTML5 Multipurpose Travel Template</title>
     <meta name="author" content="Nile-Theme">
@@ -13,8 +13,6 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800|Poppins:300i,400,300,700,400i,500|Ubuntu:300i,400,300,700,400i,500|Raleway:400,500,600,700" rel="stylesheet">
     <!-- CSS Files -->
-
-
     <!-- Owl Carousel Assets -->
     <link href="css/owl.carousel.css" rel="stylesheet">
     <link href="css/owl.theme.css" rel="stylesheet">
@@ -49,7 +47,7 @@
                     </div>
                     <div class="col-sm d-none d-sm-block">
                         <ul class="user-area list-inline float-right margin-0px text-white">
-                            <li class="list-inline-item  padding-right-10px"><a href="page-login-2.html"><i class="fa fa-lock padding-right-5px"></i>login</a></li>
+                            <li class="list-inline-item  padding-right-10px"><a href="page-login-2.php"><i class="fa fa-lock padding-right-5px"></i>login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -127,7 +125,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark background-main-color " id="mainNav">
                 <a class="navbar-brand" href="dashboard-home.html">Registro de conductores</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
         </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav navbar-sidenav background-third-color" id="exampleAccordion">
@@ -135,37 +133,37 @@
                             <a class="nav-link" href="dashboard-home.html">
                 <i class="fa fa-fw fa-dashboard"></i>
                 <span class="nav-link-text">Vehículos</span>
-              </a>
+            </a>
                         </li>
                         <li class="nav-item" data-toggle="tooltip" data-placement="right">
                             <a class="nav-link" href="dashboard-my-items.html">
                 <i class="fa fa-fw fa-table"></i>
                 <span class="nav-link-text">Ventas</span>
-              </a>
+            </a>
                         </li>
                         <li class="nav-item" data-toggle="tooltip" data-placement="right">
                             <a class="nav-link" href="dashboard-reviews.html">
                 <i class="fa fa-fw fa-star"></i>
                 <span class="nav-link-text">Destinos</span>
-              </a>
+            </a>
                         </li>
                         <li class="nav-item" data-toggle="tooltip" data-placement="right">
-                            <a class="nav-link" href="dashboard-my-profile.html">
+                            <a class="nav-link" href="dashboard-my-profile.php">
                 <i class="fa fa-fw fa-user-circle"></i>
                 <span class="nav-link-text">Registrar conductor</span>
-              </a>
+            </a>
                         </li>
                         <li class="nav-item" data-toggle="tooltip" data-placement="right">
-                            <a class="nav-link" href="dashboard-my-items.html">
+                            <a class="nav-link" href="dashboard-my-items.php">
                                 <i class="fa fa-fw" aria-hidden="true"></i>
                 <span class="nav-link-text">Tabla conductores</span>
-              </a>
+            </a>
                         </li>
                 
                 
                             
                         
-              </a>
+            </a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ml-auto">
@@ -185,50 +183,69 @@
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item "><a href="dashboard-home.html">Registro </a></li>
                                 <li class="active">conductor</li>
-
+                                
                             <div class="padding-top-10px">
-                                <form>
+                            <?php
+                                    include "modelo/conexion.php";
+                                    ?>
+                                <form method="POST">
+                                <?php
+                                    include "controlador/registro.php";
+                                    include "controlador/login.php"
+                                    ?>
+                                    
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputName">Nombres</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" name="nombres" required>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputName">Apellidos </label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" name="apellidos" required>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="inputNumber">Numero de documento </label>
-                                            <input type="text" class="form-control">
+                                            <input type="tel" class="form-control" name="dni" required>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="inputNumber">Edad  </label>
-                                            <input type="number" class="form-control">
+                                            <input type="number" class="form-control" name="edad" required>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="date">Fecha de nacimiento</label>
-                                            <input type="date" class="form-control">
+                                            <input type="date" class="form-control" name="fecha" required>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="number">Numero de licencia de conducción  </label>
-                                            <input type="number" class="form-control">
+                                            <input type="tel" class="form-control" name="licencia" required>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="">Dirección de residencia</label>
-                                            <input type="text" class="form-control">
+                                            <label for="number">direccion</label>
+                                            <input type="text" class="form-control" name="direccion" required>
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label for="email">Correo electronico</label>
-                                            <input type="email" class="form-control">
+                                            <label for="number">telefono</label>
+                                            <input type="tel" class="form-control" name="telefono"required>
                                         </div>
                                     </div>
-                                    <a href="#" class="btn-sm btn-lg text-dark text-center font-weight-bold text-uppercase rounded-0 padding-tb-10px padding-lr-30px background-grey-1 margin-right-20px">Guardar registro</a>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="email">Correo electronico</label>
+                                            <input type="email" class="form-control" name="correo" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="email">contraseña</label>
+                                            <input type="pasword" class="form-control" name="contraseña" required>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok">Registrar</button>
                                 </form>
                             </div>
 
@@ -242,7 +259,7 @@
 
                 <!-- Scroll to Top Button-->
                 <a class="scroll-to-top rounded" href="#page-top">
-          <i class="fa fa-angle-up"></i>
+        <i class="fa fa-angle-up"></i>
         </a>
                 <!-- Logout Modal-->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

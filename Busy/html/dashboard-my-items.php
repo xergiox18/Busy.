@@ -27,9 +27,21 @@
     <link rel="stylesheet" href="css/sb-admin.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+    <!-- botton  eliminar y editar -->
+    <script src="https://kit.fontawesome.com/c2d72fbcf2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+<script>
+    function eliminar(){
+      var respuesta=confirm("Estas seguro que deseas eliminar?");
+      return respuesta
+    }
+  </script>
+  
+ 
+
     <!-- Header  -->
     <header class="background-white box-shadow">
         <div class="background-main-color padding-tb-5px">
@@ -49,7 +61,7 @@
                     </div>
                     <div class="col-sm d-none d-sm-block">
                         <ul class="user-area list-inline float-right margin-0px text-white">
-                            <li class="list-inline-item  padding-right-10px"><a href="page-login-2.html"><i class="fa fa-lock padding-right-5px"></i>login</a></li>
+                            <li class="list-inline-item  padding-right-10px"><a href="page-login-2.php"><i class="fa fa-lock padding-right-5px"></i>login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -127,7 +139,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark background-main-color " id="mainNav">
                 <a class="navbar-brand" href="dashboard-home.html">Tabla de conductores</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
         </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav navbar-sidenav background-third-color" id="exampleAccordion">
@@ -135,36 +147,36 @@
                             <a class="nav-link" href="dashboard-home.html">
                 <i class="fa fa-fw fa-dashboard"></i>
                 <span class="nav-link-text">Vehículos</span>
-              </a>
+            </a>
                         </li>
                         <li class="nav-item" data-toggle="tooltip" data-placement="right">
                             <a class="nav-link" href="dashboard-my-items.html">
                 <i class="fa fa-fw fa-table"></i>
                 <span class="nav-link-text">Ventas</span>
-              </a>
+            </a>
                         </li>
                         <li class="nav-item" data-toggle="tooltip" data-placement="right">
                             <a class="nav-link" href="dashboard-reviews.html">
                 <i class="fa fa-fw fa-star"></i>
                 <span class="nav-link-text">Destinos</span>
-              </a>
+            </a>
                         </li>
                         <li class="nav-item" data-toggle="tooltip" data-placement="right">
-                            <a class="nav-link" href="registro_conductores.html">
+                            <a class="nav-link" href="registro_conductores.php">
                 <i class="fa fa-fw fa-user-circle"></i>
                 <span class="nav-link-text">Registrar conductor</span>
-              </a>
+            </a>
                         </li>
                         <li class="nav-item" data-toggle="tooltip" data-placement="right">
-                            <a class="nav-link" href="dashboard-my-items.html">
+                            <a class="nav-link" href="dashboard-my-items.php">
                                 <i class="fa fa-fw" aria-hidden="true"></i>
                 <span class="nav-link-text">Tabla conductores</span>
-              </a>
+            </a>
                         </li>
                             </ul>
                         </li>
                     </ul>
-              </a>
+            </a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ml-auto">
@@ -187,33 +199,44 @@
 
                             <!-- item  -->
                             <div class="container margin-tb-15px">
-
-                                <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%" style="font-size: 11px;">
+                            <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%" style="font-size: 11px;">
                                     <thead>
                                         <tr>
+                                        <th>id</th>
                                             <th>Nombres</th>
                                             <th>Apellidos</th>
-                                            <th>Numero de documento</th>
-                                            <th>Edad</th>
-                                            <th>Fecha de nacimiento</th>
-                                            <th>Numero de licencia</th>
-                                            <th>Dirección de residencia</th>
-                                            <th>Correo electronico</th>
+                                            <th>DNI</th>
+                                            <th>Fecha nacimiento </th>
+                                            <th>Dirección</th>
+                                            <th>telefono</th>
+                                            <th>Correo</th>
+                                            <th></th>
+                                            <th></th>
                                         </tr>
                                     </thead>
 
                                     <tbody>
                                         <tr>
-                                            <td>Jose Alejandro</td>
-                                            <td>Correa Moncada</td>
-                                            <td>1091265663</td>
-                                            <td>25</td>
-                                            <td>1997/04/25</td>
-                                            <td>1091265663</td>
-                                            <td>Cll 14# 12-43</td>
-                                            <td>pndjo123@gmail.com</td>
+                                        <?php
+                                        
+                                         include "modelo/conexion.php";
+                                        include "controlador/eliminar.php";
+                                        $sql=$conexion->query(" select * from registro_conductor ");
+                                         while ($datos=$sql->fetch_object()) { ?>
+                                         <tr><td><?= $datos->id_conductor?></td>
+                                         <td><?= $datos->nombres?></td>
+                                         <td><?= $datos->apellidos?></td>
+                                         <td><?= $datos->numero_cedula?></td>
+                                         <td><?= $datos->fecha_nacimiento?></td>
+                                         <td><?= $datos->direccion?></td>
+                                         <td><?= $datos->telefono_celular?></td>
+                                         <td><?= $datos->correo?></td>
+                                         <td> <a href="modificar.php?id=<?=  $datos->id_conductor ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                                        <td> <a onclick="return eliminar()" href="dashboard-my-items.php?id=<?=  $datos->id_conductor ?>" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a></td>
                                         </tr>
-
+                                        <?php }?>
+                                        </tbody>
+                                    </table>
 
 
                         </div>
@@ -225,7 +248,7 @@
 
                 <!-- Scroll to Top Button-->
                 <a class="scroll-to-top rounded" href="#page-top">
-          <i class="fa fa-angle-up"></i>
+    <i class="fa fa-angle-up"></i>
         </a>
                 <!-- Logout Modal-->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -234,13 +257,13 @@
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Desea cerrar sesión?</h5>
                                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">×</span>
+            <span aria-hidden="true">×</span>
                 </button>
                             </div>
                             <div class="modal-body">Selecciona salir si quieres cerrar la sesión actual, en caso contrario selecciona cancelar.</div>
                             <div class="modal-footer">
                                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                                <a class="btn btn-primary" href="page-login-2.html">Salir</a>
+                                <a class="btn btn-primary" href="page-login-2.php">Salir</a>
                             </div>
                         </div>
                     </div>
@@ -264,7 +287,8 @@
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 
 </html>
