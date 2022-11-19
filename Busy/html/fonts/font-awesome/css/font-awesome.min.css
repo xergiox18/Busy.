@@ -1596,7 +1596,7 @@
   content: "\f1ea";
 }
 .fa-wifi:before {
-  content: "\f1eb";
+  content: "➕";
 }
 .fa-calculator:before {
   content: "\f1ec";
@@ -1970,7 +1970,7 @@
 }
 .fa-tv:before,
 .fa-television:before {
-  content: "\f26c";
+  content: "➖";
 }
 .fa-contao:before {
   content: "\f26d";

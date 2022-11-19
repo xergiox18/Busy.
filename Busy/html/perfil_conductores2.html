@@ -135,6 +135,37 @@
                 </div>
             </div>
 
+            <h4>Cupos disponibles</h4><h2><span id="ContadorResta"  class="badge badge-secondary">23</span></h2>
+            <h4>Asientos ocupados</h4><h2><span id="ContadorSuma" class="badge badge-secondary">0</span></h2>
+
+            <button id="BotonResta" class="plus" style="padding: 0; border: none; background: none; cursor: pointer; transition: all .5s;"><a class="btn btn-" > <i class="fa fa-tv icon-round-ba background-pink"></i></button></a>
+
+            <button id="BotonSuma" class="plus" style="padding: 0; border: none; background: none; cursor: pointer; transition: all .5s;"><a class="btn btn-" ><i class="fa fa-wifi icon-round-ba background-pink"></i></button></a>
+            <script type="text/javascript">
+                var botonElement = document.getElementById("BotonSuma");
+                var botonElement2 = document.getElementById("BotonResta");
+                var pElement = document.getElementById("ContadorSuma");
+                var pElement2 = document.getElementById("ContadorResta");
+                var contadorAsientos = 0;
+                var contadorCupos = 23;
+                botonElement.onclick = function () {
+                    if (contadorAsientos <=23 && contadorCupos >0)
+                    {
+                        contadorAsientos++;
+                        contadorCupos--;
+                        pElement.textContent = contadorAsientos;
+                        pElement2.textContent = contadorCupos;
+                    }                    
+                }
+                botonElement2.onclick = function () {
+                    if (contadorCupos >0 && contadorAsientos <=23)
+                    contadorAsientos--;
+                    contadorCupos++;
+                    pElement.textContent = contadorAsientos;
+                    pElement2.textContent = contadorCupos;
+                }
+            </script>
+
 
         </div>
         <!-- /.container-fluid-->

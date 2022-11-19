@@ -26794,6 +26794,10 @@ rounded .country .capital {
     animation: color-fade 10s infinite;
 }
 
+.plus:hover {
+        background-color: brown;
+}
+
 @-webkit-keyframes color-fade {
     0% {
         background: #9a5342;
