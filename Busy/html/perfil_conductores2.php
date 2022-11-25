@@ -40,23 +40,12 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
 
             <ul class="navbar-nav navbar-sidenav background-third-color" id="exampleAccordion">
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                    <a class="nav-link" href="dashboard-v2-home.html">
-                <i class="fa fa-fw fa-dashboard"></i>
-                <span class="nav-link-text">Dashboard</span>
-              </a>
-                </li>
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My items">
-                    <a class="nav-link" href="dashboard-v2-my-items.html">
-                <i class="fa fa-fw fa-table"></i>
-                <span class="nav-link-text">My items</span>
-              </a>
-                </li>
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="My Profile">
-                    <a class="nav-link" href="dashboard-v2-my-profile.html">
-                <i class="fa fa-fw fa-user-circle"></i>
-                <span class="nav-link-text">My Profile</span>
-              </a>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Rutas">
+                    <a class="nav-link" href="inicio-ruta.php">
+                        <i class="fa fa-fw fa-user-circle"></i>
+                        <span class="nav-link-text">Rutas</span>
+                    </a>
                 </li>
             </ul>
 
@@ -167,6 +156,22 @@
                     } 
                 }
             </script>
+
+<div class="col-12">
+    <button id="btnIniciar" class="btn btn-info">Iniciar</button>
+    <button id="btnDetener" class="btn btn-danger">Detener</button>
+    <br>
+    <strong>Latitud: </strong> <span id="latitud"></span>
+    <strong>Longitud: </strong> <span id="longitud"></span>
+    <br>
+    <a href="./ubicaciones.txt">Ver ubicaciones</a>
+    <br>
+    <pre id="log"></pre>
+</div>
+</div>
+</main>
+<script src="ubicacion-js-php-master/script.js">
+</script>
 
 
         </div>

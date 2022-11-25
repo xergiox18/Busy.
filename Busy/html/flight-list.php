@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -37,7 +38,7 @@
         <div class="background-main-color padding-tb-5px">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm d-none d-sm-block text-white">Modern Creative Website ....</div>
+                    <div class="col-sm d-none d-sm-block text-white"></div>
                     <div class="col-sm">
                         <ul class="list-inline text-center margin-0px text-white">
                             <li class="list-inline-item"><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -445,20 +446,42 @@
         </div>
     </header>
     <!-- // Header  -->
-    <!-- Page title --->
+    <!-- lista de rutas --->
     <section class="background-grey-1 padding-tb-25px text-grey-4">
         <div class="container">
-            <h6 class="font-weight-300 text-capitalize float-md-left font-2 padding-tb-10px">flight list</h6>
+            <h6 class="font-weight-300 text-capitalize float-md-left font-2 padding-tb-10px">Lista de rutas</h6>
             <ol class="breadcrumb z-index-2 position-relative no-background padding-tb-10px padding-lr-0px  margin-0px float-md-right">
-                <li><a href="#" class="text-grey-4">Home</a></li>
+                <li><a href="#" class="text-grey-4">Inicio</a></li>
                 <li><a href="#" class="text-grey-4">pages</a></li>
-                <li class="active">flight list</li>
+                <li class="active">Lista de rutas</li>
             </ol>
             <div class="clearfix"></div>
         </div>
     </section>
-    <!-- // Page title --->
+    <!-- // Conexion--->
+<?php
+$db_host="localhost";
+$db_nombre="busy";
+$db_usuario="root";
+$db_password="";
 
+$conexion = mysqli_connect($db_host,$db_usuario,$db_password,$db_nombre);
+$usuario = "SELECT * FROM conductor";
+$resultado = mysqli_query($conexion, $usuario);
+
+
+   while($row = $resultado->fetch_assoc()){
+    $nombre = $row['nombre'];
+    $usuario = $row['usuario'];
+    $contraseña = $row['contraseña'];
+    $correo =  $row['correo'];
+    $placa = $row['placa'];
+    $id = $row['id'];
+   }
+        
+   
+    
+?>
 
     <!-- page output -->
     <div class="padding-tb-40px background-light-grey">
@@ -470,30 +493,31 @@
                 <div class="col-lg-3 sticky-sidebar">
                     <!-- Hotels Search -->
                     <div class="widget">
-                        <h4 class="widget-title clearfix"><span>flight  Search</span></h4>
+                        <h4 class="widget-title clearfix"><span>Buscar rutas</span></h4>
                         <div class="search-filter">
                             <div class="form-group margin-bottom-5px">
-                                <label>From</label>
-                                <div class="destination"><input type="text" class="input-text full-width" placeholder="Saudi Arabia"></div>
+                                <label>Desde</label>
+                                <div class="destination"><input type="text" class="input-text full-width" placeholder="Armenia"></div>
                             </div>
                             <div class="form-group margin-bottom-5px">
-                                <label>To</label>
-                                <div class="destination"><input type="text" class="input-text full-width" placeholder="United States , United States"></div>
+                                <label>Hacia</label>
+                                <div class="destination"><input type="text" class="input-text full-width" placeholder="Su destino"></div>
                             </div>
                             <div class="form-group margin-bottom-5px">
-                                <label>Departing On</label>
+                                <label>Hora de salida</label>
                                 <div class="date-input"><input type="text" class="input-text datepicker full-width hasDatepicker" placeholder="15 / 5 / 2017"></div>
                             </div>
+                           <!--
                             <div class="form-group margin-bottom-5px">
-                                <label>Arriving On</label>
+                                <label></label>
                                 <div class="date-input"><input type="text" class="input-text datepicker full-width hasDatepicker" placeholder="15 / 5 / 2017"></div>
-                            </div>
-                            <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center text-uppercase font-weight-600"><i class="fa fa-search"></i> flight  Search</a>
+                            </div>-->
+                            <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center text-uppercase font-weight-600"><i class="fa fa-search"></i> Buscar</a>
                         </div>
                     </div>
                     <!-- //  Hotels Search -->
 
-                    <!-- Price Search -->
+                    <!-- Price Search
                     <div class="widget">
                         <h4 class="widget-title clearfix"><span>Price</span></h4>
                         <div class="form-check border-bottom-1 border-grey-1">
@@ -527,10 +551,10 @@
                               </label>
                         </div>
                         <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center text-uppercase font-weight-600"><i class="fa fa-search"></i> Refresh  Search</a>
-                    </div>
+                    </div> -->
                     <!-- Price Search -->
 
-                    <!-- Price Search -->
+                    <!-- Price Search 
                     <div class="widget">
                         <h4 class="widget-title clearfix"><span>Flight Type</span></h4>
                         <div class="form-check border-bottom-1 border-grey-1">
@@ -558,7 +582,7 @@
                               </label>
                         </div>
                         <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center text-uppercase font-weight-600"><i class="fa fa-search"></i> Refresh  Search</a>
-                    </div>
+                    </div> -->
                     <!-- Price Search -->
 
                 </div>
@@ -572,7 +596,7 @@
                         <div class="row no-gutters">
                             <div class="col-lg-4">
                                 <div class="hotel-img position-relative">
-                                    <img src="http://placehold.it/400x200" alt="">
+                                    <img src="https://live.staticflickr.com/2559/4076835274_77bb5e1c5e_b.jpg" alt="">
                                     <div class="hover-option background-main-color opacity-6">
                                         <h3 class="text-center text-white padding-top-n-25 "></h3>
                                     </div>
@@ -580,20 +604,22 @@
                             </div>
                             <div class="col-lg-8">
                                 <div class="padding-20px">
-                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">from: Riyadh</span>to: Paris</a></h3>
-                                    <a href="#" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Booking Now </a>
+                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px"><?php  echo $nombre; ?></span>Hacia: La tebaida</a></h3>
+                                    <a href="#" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Comprar </a>
                                     <small class="text-uppercase text-extra-small margin-right-30px">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-up margin-right-5px"></i>
-                                            Desparture :  <span class="text-third-color margin-right-5px">28/3/2017</span> </a>
+                                            Hora de salida :  <span class="text-third-color margin-right-5px">12:00</span> </a>
                                         </small>
-                                    <small class="text-uppercase text-extra-small">
+                                    <!--
+                                        <small class="text-uppercase text-extra-small">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-down margin-right-5px"></i>
                                             Return :  <span class="text-third-color margin-right-5px">28/3/2017</span> </a>
+                                            -->
                                         </small>
                                     <div class="claerfix"></div>
                                     <div class="margin-top-8px padding-top-8px text-uppercase text-extra-small border-top-1 border-grey-1">
-                                        <strong class="text-medium text-third-color padding-right-5px font-weight-bold">$500</strong>Person
-                                        <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="margin-right-40px">Oneway flight</span> 2 Sotp</i>
+                                        <strong class="text-medium text-third-color padding-right-5px font-weight-bold">$9.600</strong>
+                                        <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="margin-right-40px">Rapido Quíndio</span></i>
                                     </div>
                                 </div>
                             </div>
@@ -607,7 +633,7 @@
                         <div class="row no-gutters">
                             <div class="col-lg-4">
                                 <div class="hotel-img position-relative">
-                                    <img src="http://placehold.it/400x200" alt="">
+                                    <img src="https://felizviaje.co/img/slider/pasajes-de-bus.jpg" alt="">
                                     <div class="hover-option background-main-color opacity-6">
                                         <h3 class="text-center text-white padding-top-n-25 "></h3>
                                     </div>
@@ -615,20 +641,22 @@
                             </div>
                             <div class="col-lg-8">
                                 <div class="padding-20px">
-                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">from: Riyadh</span>to: Paris</a></h3>
-                                    <a href="#" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Booking Now </a>
+                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">Desde: Armenia</span>Hacia: La tebaida</a></h3>
+                                    <a href="#" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Comprar </a>
                                     <small class="text-uppercase text-extra-small margin-right-30px">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-up margin-right-5px"></i>
-                                            Desparture :  <span class="text-third-color margin-right-5px">28/3/2017</span> </a>
+                                            Hora de salida :  <span class="text-third-color margin-right-5px">12:00</span> </a>
                                         </small>
-                                    <small class="text-uppercase text-extra-small">
+                                    <!--
+                                        <small class="text-uppercase text-extra-small">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-down margin-right-5px"></i>
                                             Return :  <span class="text-third-color margin-right-5px">28/3/2017</span> </a>
+                                            -->
                                         </small>
                                     <div class="claerfix"></div>
                                     <div class="margin-top-8px padding-top-8px text-uppercase text-extra-small border-top-1 border-grey-1">
-                                        <strong class="text-medium text-third-color padding-right-5px font-weight-bold">$500</strong>Person
-                                        <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="margin-right-40px">Oneway flight</span> 2 Sotp</i>
+                                        <strong class="text-medium text-third-color padding-right-5px font-weight-bold">$9.600</strong>
+                                        <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="margin-right-40px">Rapido Quíndio</span></i>
                                     </div>
                                 </div>
                             </div>
@@ -642,7 +670,7 @@
                         <div class="row no-gutters">
                             <div class="col-lg-4">
                                 <div class="hotel-img position-relative">
-                                    <img src="http://placehold.it/400x200" alt="">
+                                    <img src="https://felizviaje.co/img/slider/pasajes-de-bus.jpg" alt="">
                                     <div class="hover-option background-main-color opacity-6">
                                         <h3 class="text-center text-white padding-top-n-25 "></h3>
                                     </div>
@@ -650,20 +678,22 @@
                             </div>
                             <div class="col-lg-8">
                                 <div class="padding-20px">
-                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">from: Riyadh</span>to: Paris</a></h3>
-                                    <a href="#" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Booking Now </a>
+                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">Desde: Armenia</span>Hacia: La tebaida</a></h3>
+                                    <a href="#" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Comprar </a>
                                     <small class="text-uppercase text-extra-small margin-right-30px">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-up margin-right-5px"></i>
-                                            Desparture :  <span class="text-third-color margin-right-5px">28/3/2017</span> </a>
+                                            Hora de salida :  <span class="text-third-color margin-right-5px">12:00</span> </a>
                                         </small>
-                                    <small class="text-uppercase text-extra-small">
+                                    <!--
+                                        <small class="text-uppercase text-extra-small">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-down margin-right-5px"></i>
                                             Return :  <span class="text-third-color margin-right-5px">28/3/2017</span> </a>
+                                            -->
                                         </small>
                                     <div class="claerfix"></div>
                                     <div class="margin-top-8px padding-top-8px text-uppercase text-extra-small border-top-1 border-grey-1">
-                                        <strong class="text-medium text-third-color padding-right-5px font-weight-bold">$500</strong>Person
-                                        <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="margin-right-40px">Oneway flight</span> 2 Sotp</i>
+                                        <strong class="text-medium text-third-color padding-right-5px font-weight-bold">$9.600</strong>
+                                        <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="margin-right-40px">Rapido Quíndio</span></i>
                                     </div>
                                 </div>
                             </div>
@@ -677,7 +707,7 @@
                         <div class="row no-gutters">
                             <div class="col-lg-4">
                                 <div class="hotel-img position-relative">
-                                    <img src="http://placehold.it/400x200" alt="">
+                                    <img src="https://felizviaje.co/img/slider/pasajes-de-bus.jpg" alt="">
                                     <div class="hover-option background-main-color opacity-6">
                                         <h3 class="text-center text-white padding-top-n-25 "></h3>
                                     </div>
@@ -685,20 +715,22 @@
                             </div>
                             <div class="col-lg-8">
                                 <div class="padding-20px">
-                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">from: Riyadh</span>to: Paris</a></h3>
-                                    <a href="#" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Booking Now </a>
+                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">Desde: Armenia</span>Hacia: La tebaida</a></h3>
+                                    <a href="#" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Comprar </a>
                                     <small class="text-uppercase text-extra-small margin-right-30px">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-up margin-right-5px"></i>
-                                            Desparture :  <span class="text-third-color margin-right-5px">28/3/2017</span> </a>
+                                            Hora de salida :  <span class="text-third-color margin-right-5px">12:00</span> </a>
                                         </small>
-                                    <small class="text-uppercase text-extra-small">
+                                    <!--
+                                        <small class="text-uppercase text-extra-small">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-down margin-right-5px"></i>
                                             Return :  <span class="text-third-color margin-right-5px">28/3/2017</span> </a>
+                                            -->
                                         </small>
                                     <div class="claerfix"></div>
                                     <div class="margin-top-8px padding-top-8px text-uppercase text-extra-small border-top-1 border-grey-1">
-                                        <strong class="text-medium text-third-color padding-right-5px font-weight-bold">$500</strong>Person
-                                        <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="margin-right-40px">Oneway flight</span> 2 Sotp</i>
+                                        <strong class="text-medium text-third-color padding-right-5px font-weight-bold">$9.600</strong>
+                                        <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="margin-right-40px">Rapido Quíndio</span></i>
                                     </div>
                                 </div>
                             </div>
@@ -712,7 +744,7 @@
                         <div class="row no-gutters">
                             <div class="col-lg-4">
                                 <div class="hotel-img position-relative">
-                                    <img src="http://placehold.it/400x200" alt="">
+                                    <img src="https://felizviaje.co/img/slider/pasajes-de-bus.jpg" alt="">
                                     <div class="hover-option background-main-color opacity-6">
                                         <h3 class="text-center text-white padding-top-n-25 "></h3>
                                     </div>
@@ -720,20 +752,22 @@
                             </div>
                             <div class="col-lg-8">
                                 <div class="padding-20px">
-                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">from: Riyadh</span>to: Paris</a></h3>
-                                    <a href="#" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Booking Now </a>
+                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">Desde: Armenia</span>Hacia: La tebaida</a></h3>
+                                    <a href="#" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Comprar </a>
                                     <small class="text-uppercase text-extra-small margin-right-30px">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-up margin-right-5px"></i>
-                                            Desparture :  <span class="text-third-color margin-right-5px">28/3/2017</span> </a>
+                                            Hora de salida :  <span class="text-third-color margin-right-5px">12:00</span> </a>
                                         </small>
-                                    <small class="text-uppercase text-extra-small">
+                                    <!--
+                                        <small class="text-uppercase text-extra-small">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-down margin-right-5px"></i>
                                             Return :  <span class="text-third-color margin-right-5px">28/3/2017</span> </a>
+                                            -->
                                         </small>
                                     <div class="claerfix"></div>
                                     <div class="margin-top-8px padding-top-8px text-uppercase text-extra-small border-top-1 border-grey-1">
-                                        <strong class="text-medium text-third-color padding-right-5px font-weight-bold">$500</strong>Person
-                                        <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="margin-right-40px">Oneway flight</span> 2 Sotp</i>
+                                        <strong class="text-medium text-third-color padding-right-5px font-weight-bold">$9.600</strong>
+                                        <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="margin-right-40px">Rapido Quíndio</span></i>
                                     </div>
                                 </div>
                             </div>
@@ -747,7 +781,7 @@
                         <div class="row no-gutters">
                             <div class="col-lg-4">
                                 <div class="hotel-img position-relative">
-                                    <img src="http://placehold.it/400x200" alt="">
+                                    <img src="https://felizviaje.co/img/slider/pasajes-de-bus.jpg" alt="">
                                     <div class="hover-option background-main-color opacity-6">
                                         <h3 class="text-center text-white padding-top-n-25 "></h3>
                                     </div>
@@ -755,20 +789,22 @@
                             </div>
                             <div class="col-lg-8">
                                 <div class="padding-20px">
-                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">from: Riyadh</span>to: Paris</a></h3>
-                                    <a href="#" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Booking Now </a>
+                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">Desde: Armenia</span>Hacia: La tebaida</a></h3>
+                                    <a href="#" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Comprar </a>
                                     <small class="text-uppercase text-extra-small margin-right-30px">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-up margin-right-5px"></i>
-                                            Desparture :  <span class="text-third-color margin-right-5px">28/3/2017</span> </a>
+                                            Hora de salida :  <span class="text-third-color margin-right-5px">12:00</span> </a>
                                         </small>
-                                    <small class="text-uppercase text-extra-small">
+                                    <!--
+                                        <small class="text-uppercase text-extra-small">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-down margin-right-5px"></i>
                                             Return :  <span class="text-third-color margin-right-5px">28/3/2017</span> </a>
+                                            -->
                                         </small>
                                     <div class="claerfix"></div>
                                     <div class="margin-top-8px padding-top-8px text-uppercase text-extra-small border-top-1 border-grey-1">
-                                        <strong class="text-medium text-third-color padding-right-5px font-weight-bold">$500</strong>Person
-                                        <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="margin-right-40px">Oneway flight</span> 2 Sotp</i>
+                                        <strong class="text-medium text-third-color padding-right-5px font-weight-bold">$9.600</strong>
+                                        <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="margin-right-40px">Rapido Quíndio</span></i>
                                     </div>
                                 </div>
                             </div>
@@ -782,7 +818,7 @@
                         <div class="row no-gutters">
                             <div class="col-lg-4">
                                 <div class="hotel-img position-relative">
-                                    <img src="http://placehold.it/400x200" alt="">
+                                    <img src="https://felizviaje.co/img/slider/pasajes-de-bus.jpg" alt="">
                                     <div class="hover-option background-main-color opacity-6">
                                         <h3 class="text-center text-white padding-top-n-25 "></h3>
                                     </div>
@@ -790,20 +826,22 @@
                             </div>
                             <div class="col-lg-8">
                                 <div class="padding-20px">
-                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">from: Riyadh</span>to: Paris</a></h3>
-                                    <a href="#" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Booking Now </a>
+                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">Desde: Armenia</span>Hacia: La tebaida</a></h3>
+                                    <a href="#" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Comprar </a>
                                     <small class="text-uppercase text-extra-small margin-right-30px">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-up margin-right-5px"></i>
-                                            Desparture :  <span class="text-third-color margin-right-5px">28/3/2017</span> </a>
+                                            Hora de salida :  <span class="text-third-color margin-right-5px">12:00</span> </a>
                                         </small>
-                                    <small class="text-uppercase text-extra-small">
+                                    <!--
+                                        <small class="text-uppercase text-extra-small">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-down margin-right-5px"></i>
                                             Return :  <span class="text-third-color margin-right-5px">28/3/2017</span> </a>
+                                            -->
                                         </small>
                                     <div class="claerfix"></div>
                                     <div class="margin-top-8px padding-top-8px text-uppercase text-extra-small border-top-1 border-grey-1">
-                                        <strong class="text-medium text-third-color padding-right-5px font-weight-bold">$500</strong>Person
-                                        <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="margin-right-40px">Oneway flight</span> 2 Sotp</i>
+                                        <strong class="text-medium text-third-color padding-right-5px font-weight-bold">$9.600</strong>
+                                        <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="margin-right-40px">Rapido Quíndio</span></i>
                                     </div>
                                 </div>
                             </div>
@@ -817,7 +855,7 @@
                         <div class="row no-gutters">
                             <div class="col-lg-4">
                                 <div class="hotel-img position-relative">
-                                    <img src="http://placehold.it/400x200" alt="">
+                                    <img src="https://felizviaje.co/img/slider/pasajes-de-bus.jpg" alt="">
                                     <div class="hover-option background-main-color opacity-6">
                                         <h3 class="text-center text-white padding-top-n-25 "></h3>
                                     </div>
@@ -825,20 +863,22 @@
                             </div>
                             <div class="col-lg-8">
                                 <div class="padding-20px">
-                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">from: Riyadh</span>to: Paris</a></h3>
-                                    <a href="#" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Booking Now </a>
+                                    <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px">Desde: Armenia</span>Hacia: La tebaida</a></h3>
+                                    <a href="#" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Comprar </a>
                                     <small class="text-uppercase text-extra-small margin-right-30px">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-up margin-right-5px"></i>
-                                            Desparture :  <span class="text-third-color margin-right-5px">28/3/2017</span> </a>
+                                            Hora de salida :  <span class="text-third-color margin-right-5px">12:00</span> </a>
                                         </small>
-                                    <small class="text-uppercase text-extra-small">
+                                    <!--
+                                        <small class="text-uppercase text-extra-small">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-down margin-right-5px"></i>
                                             Return :  <span class="text-third-color margin-right-5px">28/3/2017</span> </a>
+                                            -->
                                         </small>
                                     <div class="claerfix"></div>
                                     <div class="margin-top-8px padding-top-8px text-uppercase text-extra-small border-top-1 border-grey-1">
-                                        <strong class="text-medium text-third-color padding-right-5px font-weight-bold">$500</strong>Person
-                                        <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="margin-right-40px">Oneway flight</span> 2 Sotp</i>
+                                        <strong class="text-medium text-third-color padding-right-5px font-weight-bold">$9.600</strong>
+                                        <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="margin-right-40px">Rapido Quíndio</span></i>
                                     </div>
                                 </div>
                             </div>

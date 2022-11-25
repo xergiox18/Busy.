@@ -68,12 +68,12 @@
                             
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-form-label"><strong>Correo electronico</strong></label>
-                                <input type="email"  class="form-control rounded-0" id="inputEmail3" placeholder="Email" name="correo" required>
+                                <input type="email"   class="form-control rounded-0" id="inputEmail3" placeholder="Email" name="correo" required>
                             </div>
                             <div class="form-group">
                         
                                 <label for="inputPassword3" class="col-form-label"><strong>Contraseña</strong></label>
-                                <input type="password" class="form-control rounded-0" id="inputPassword3" placeholder="Password" name="contraseña" required>
+                                <input type="password" class="form-control rounded-0" id="inputPassword3" placeholder="Password" name="contraseña"  required>
                             </div>
                             <div class="form-group ">
                                 <div class="form-check">

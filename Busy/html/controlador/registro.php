@@ -7,7 +7,6 @@ if (!empty($_POST["btnregistrar"])){
     or !empty($_POST["fecha"])or !empty($_POST["licencia"])
     or !empty($_POST["direccion"])or !empty($_POST["telefono"])
     or !empty($_POST["correo"])){
-
         $nombres=$_POST["nombres"];
         $apellidos=$_POST["apellidos"];
         $dni=$_POST["dni"];
@@ -17,13 +16,12 @@ if (!empty($_POST["btnregistrar"])){
         $direccion=$_POST["direccion"];
         $telefono=$_POST["telefono"];
         $correo=$_POST["correo"];
-        $contraseña=$_POST["contraseña"];
-        
+        $contraseña=($_POST["contraseña"]);
         $sql=$conexion->query(" insert into registro_conductor(nombres, apellidos, numero_cedula,edad,fecha_nacimiento, numero_licencia, direccion, telefono_celular,correo,contraseña)values 
         ('$nombres','$apellidos',$dni,$edad,'$fecha',$licencia,'$direccion','$telefono','$correo','$contraseña')");
        if($sql==1)  {
         echo '<div class="alert alert-success">conductor registrado correctamente</div>';
-      
+        
     } else {
         echo '<div class="alert alert-danger">Error al  registrar conductor</div>';
        }

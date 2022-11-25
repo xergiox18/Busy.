@@ -118,21 +118,21 @@
         </div>
     </header>
     <!-- // Header  -->
-    <div class="background-light-grey ">
+    <div class="background-light-grey">
 
-    <div class="container padding-tb-50px">
+        <div class="container padding-tb-50px">
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-dark background-main-color " id="mainNav">
-                <a class="navbar-brand" href="dashboard-home.html">Registro de conductores</a>
+                <a class="navbar-brand" href="dashboard-home.html">Registro de Rutas</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav navbar-sidenav background-third-color" id="exampleAccordion">
                         <li class="nav-item" data-toggle="tooltip" data-placement="right">
-                            <a class="nav-link" href="registro_buses.php">
+                            <a class="nav-link" href="dashboard-home.html">
                 <i class="fa fa-fw fa-dashboard"></i>
-                <span class="nav-link-text">Registrar Vehículos</span>
+                <span class="nav-link-text">Vehículos</span>
             </a>
                         </li>
                         <li class="nav-item" data-toggle="tooltip" data-placement="right">
@@ -171,8 +171,6 @@
                                 <span class="nav-link-text">Tabla de rutas </span>
                             </a>
                         </li>
-
-
                 
                 
                             
@@ -196,7 +194,7 @@
                         <div class="col-12">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item "><a href="dashboard-home.html">Registro </a></li>
-                                <li class="active">conductor</li>
+                                <li class="active">rutas</li>
                                 
                             <div class="padding-top-10px">
                             <?php
@@ -204,62 +202,37 @@
                                     ?>
                                 <form method="POST">
                                 <?php
-                                    include "controlador/registro.php";
+                                    include "controlador/registro_rutas.php";
                                     include "controlador/login.php"
                                     ?>
                                     
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="inputName">Nombres</label>
-                                            <input type="text" autocomplete="off" class="form-control" name="nombres" required>
+                                            <label for="inputName">lugar de salida</label>
+                                            <input type="text" autocomplete="off" class="form-control" name="origen" required>
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label for="inputName">Apellidos </label>
-                                            <input type="text" autocomplete="off" class="form-control" name="apellidos" required>
+                                            <label for="inputName">Destino de la ruta </label>
+                                            <input type="text" autocomplete="off" class="form-control" name="destino" required>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="inputNumber">Numero de documento </label>
-                                            <input type="tel" autocomplete="off" class="form-control" name="dni" required>
+                                            <label for="inputNumber">Horarios de ruta</label>
+                                            <input type="textarea" autocomplete="off" class="form-control" name="horario" required>
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label for="inputNumber">Edad  </label>
-                                            <input type="number" autocomplete="off" class="form-control" name="edad" required>
+                                            <label for="inputNumber">Intervalo de ruta</label>
+                                            <input type="text" autocomplete="off" class="form-control" name="intervalos" required>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="date">Fecha de nacimiento</label>
-                                            <input type="date" autocomplete="off" class="form-control" name="fecha" required>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="number">Numero de licencia de conducción  </label>
-                                            <input type="tel" autocomplete="off" class="form-control" name="licencia" required>
+                                            <label for="date">$Precio de pasaje</label>
+                                            <input type="text" autocomplete="off" class="form-control" name="precio" required>
                                         </div>
                                     </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="number">direccion</label>
-                                            <input type="text" autocomplete="off" class="form-control" name="direccion" required>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="number">telefono</label>
-                                            <input type="tel" autocomplete="off"  class="form-control" name="telefono"required>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="email">Correo electronico</label>
-                                            <input type="email" autocomplete="off" class="form-control" name="correo" required>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="email">contraseña</label>
-                                            <input type="pasword" autocomplete="off" class="form-control" name="contraseña" required>
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok">Registrar</button>
+                                    <button type="submit" class="btn btn-primary" name="btnruta" value="ok">Registrar ruta</button>
                                 </form>
                             </div>
 
@@ -288,7 +261,7 @@
                             <div class="modal-body">Selecciona salir si quieres cerrar la sesión actual, en caso contrario selecciona cancelar.</div>
                             <div class="modal-footer">
                                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                                <a class="btn btn-primary" href="page-login-2.php">Salir</a>
+                                <a class="btn btn-primary" href="page-login-2.html">Salir</a>
                             </div>
                         </div>
                     </div>
