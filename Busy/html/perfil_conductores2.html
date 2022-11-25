@@ -158,11 +158,13 @@
                     }                    
                 }
                 botonElement2.onclick = function () {
-                    if (contadorCupos >0 && contadorAsientos <=23)
-                    contadorAsientos--;
-                    contadorCupos++;
-                    pElement.textContent = contadorAsientos;
-                    pElement2.textContent = contadorCupos;
+                    if (contadorCupos <=23 && contadorAsientos >0)
+                    {
+                        contadorAsientos--;
+                        contadorCupos++;
+                        pElement.textContent = contadorAsientos;
+                        pElement2.textContent = contadorCupos;
+                    } 
                 }
             </script>
 
