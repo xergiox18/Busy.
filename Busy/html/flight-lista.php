@@ -53,7 +53,6 @@
                     <div class="col-sm d-none d-sm-block">
                         <ul class="user-area list-inline float-right margin-0px text-white">
                             <li class="list-inline-item  padding-right-10px"><a href="page-login-2.html"><i class="fa fa-lock padding-right-5px"></i>login</a></li>
-                            <li class="list-inline-item"><a href="page-login-1.html"><i class="fa fa-user-plus padding-right-5px"></i>register</a></li>
                         </ul>
                     </div>
                 </div>
@@ -605,7 +604,7 @@ $resultado = mysqli_query($conexion, $usuario);
                             <div class="col-lg-8">
                                 <div class="padding-20px">
                                     <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px"><?php  echo $nombre; ?></span>Hacia: La tebaida</a></h3>
-                                    <a href="#" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Comprar </a>
+                                    <a href="index.php" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Comprar </a>
                                     <small class="text-uppercase text-extra-small margin-right-30px">
                                             <a href="#" class="text-grey-4"><i class="fa fa-chevron-up margin-right-5px"></i>
                                             Hora de salida :  <span class="text-third-color margin-right-5px">12:00</span> </a>
