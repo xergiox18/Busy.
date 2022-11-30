@@ -260,14 +260,14 @@ include "controlador/modificar_ruta.php"
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="inputName">Intervalo de rutas</label>
-                                                <input type="textarea" autocomplete="off" class="form-control" name="horario"
+                                                <input type="textarea" autocomplete="off" class="form-control" name="intervalo"
                                                     value="<?= $datos->intervalo_ruta ?>" required>
                                             </div>
                                             </div>
                                             <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="inputName">Precio de pasaje</label>
-                                                <input type="text" autocomplete="off" class="form-control" name="horario"
+                                                <input type="text" autocomplete="off" class="form-control" name="precio"
                                                     value="<?= $datos->precio_ruta ?>" required>
                                             </div>
                                             </div>

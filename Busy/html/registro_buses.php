@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<?php?>
+
 
 <head>
     <title>Travelz HTML5 Multipurpose Travel Template</title>
