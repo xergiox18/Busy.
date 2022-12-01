@@ -260,7 +260,7 @@ include "controlador/modificar_ruta.php"
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="inputName">Intervalo de rutas</label>
-                                                <input type="textarea" autocomplete="off" class="form-control" name="intervalo"
+                                                <input type="textarea" autocomplete="off" class="form-control" name="intervalos"
                                                     value="<?= $datos->intervalo_ruta ?>" required>
                                             </div>
                                             </div>

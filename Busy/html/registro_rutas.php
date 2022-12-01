@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -130,9 +133,9 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav navbar-sidenav background-third-color" id="exampleAccordion">
                         <li class="nav-item" data-toggle="tooltip" data-placement="right">
-                            <a class="nav-link" href="dashboard-home.html">
+                            <a class="nav-link" href="registro_buses.php">
                 <i class="fa fa-fw fa-dashboard"></i>
-                <span class="nav-link-text">Vehículos</span>
+                <span class="nav-link-text">Registrar Vehículos</span>
             </a>
                         </li>
                         <li class="nav-item" data-toggle="tooltip" data-placement="right">
@@ -261,7 +264,7 @@
                             <div class="modal-body">Selecciona salir si quieres cerrar la sesión actual, en caso contrario selecciona cancelar.</div>
                             <div class="modal-footer">
                                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                                <a class="btn btn-primary" href="page-login-2.html">Salir</a>
+                                <a class="btn btn-primary" href="controlador/cerrar_sesion.php">Salir</a>
                             </div>
                         </div>
                     </div>

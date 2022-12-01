@@ -275,7 +275,7 @@
                                 contrario selecciona cancelar.</div>
                             <div class="modal-footer">
                                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                                <a class="btn btn-primary" href="page-login-2.html">Salir</a>
+                                <a class="btn btn-primary" href="controlador/cerrar_sesion.php">Salir</a>
                             </div>
                         </div>
                     </div>

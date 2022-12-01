@@ -1,7 +1,8 @@
 <?php
 //DESTRUIR LA SESION DE UN USUARIO LOGEADO AL MOMENTO DE CERRAR SESION
 session_start();
-/*session_destroy();*/
+if (empty($_SESSION["id"])) {
+    header("location: page-login-2.php");}
 ?>
 
 
@@ -105,7 +106,7 @@ session_start();
                     <a href="#" class="margin-top-5px d-inline-block text-white margin-right-70px">
                         <img src="http://placehold.it/60x60" class="height-30px border-radius-30" alt="">
                         <?php
-                        //echo $_SESSION["nombres"] . " " . $_SESSION["apellidos"];
+                        echo $_SESSION["nombres"] . " " . $_SESSION["apellidos"];
                         ?>
                     </a>
                 </li>
@@ -120,84 +121,113 @@ session_start();
     </nav>
     <div class="content-wrapper background-light-grey">
         <div class="container-fluid">
-
-
-
+    
+    
+    
             <div class="row padding-top-50px padding-bottom-150px">
-
+    
                 <div class="col-12">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item "><a href="#">Ruta</a></li>
                         <li class="active">Inicio de Recorrido</li>
                     </ol>
-
                     <div class="padding-top-10px">
-                        <form>
+                       <?php
+                       include "controlador/iniciar_rutas.php";
+                       ?>
+                        <form method="POST">
+                        <?php
+                        include "modelo/conexion.php";
+                        
+                        ?>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <select class="form-select" aria-label="Default select example" name="origen"
-                                        class="form-control">
-                                        <option selected>Selecciona el lugar de salida</option>
-                                        <option value="1">Montenegro</option>
-                                        <option value="2">Pueblo tapao</option>
-                                        <option value="3">Armenia</option>
-                                        <option value="4">Filandia</option>
-                                        <option value="5">Quimbaya</option>
-                                        <option value="6">Salento</option>
-                                        <option value="7">Calarca</option>
-                                    </select>
-                                </div>
-                            </div>
+                                   
+                                 <select class="form-select" aria-label="Default select example" name="origenf" required class="form-control">
+                                    <option value="0">Selecciona el lugar de salida</option>
+                                    <?php
+                                     include "modelo/conexion.php";
 
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <select class="form-select" aria-label="Default select example" name="destino"
-                                        class="form-control">
-                                        <option selected>Selecciona el destino del Recorrido</option>
-                                        <option value="1">Montenegro</option>
-                                        <option value="2">Pueblo tapao</option>
-                                        <option value="3">Armenia</option>
-                                        <option value="4">Filandia</option>
-                                        <option value="5">Quimbaya</option>
-                                        <option value="6">Salento</option>
-                                        <option value="7">Calarca</option>
-                                    </select>
-                                </div>
-                            </div>
+                                     $consulta="SELECT * FROM ruta";
+                                     $ejecutar=mysqli_query($conexion,$consulta) or die(mysqli_error($conexion));
 
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <select class="form-select" aria-label="Default select example" name="placa"
-                                        class="form-control">
-                                        <option selected>Selecciona la placa del bus</option>
-                                        <option value="1">Montenegro</option>
-                                        <option value="2">Pueblo tapao</option>
-                                        <option value="3">Armenia</option>
-                                        <option value="4">Filandia</option>
-                                        <option value="5">Quimbaya</option>
-                                        <option value="6">Salento</option>
-                                        <option value="7">Calarca</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <button a href="perfil_conductores2.php" type="submit" class="btn btn-primary"
-                                        name="btniniciar" value="ok">Iniciar
-                                        ruta</a></button>
-                                </div>
-                            </div>
 
-                        </form>
-                    </div>
+                                     ?>
+                                     <?php foreach  ($ejecutar as $opciones):   ?>
 
+                                        <option value="<?php echo $opciones['origen_ruta']?>"><?php echo $opciones['origen_ruta']?></option>
+                                
+                                        <?php endforeach ?>   
+                                    
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <select class="form-select" aria-label="Default select example" name="destinof" required class="form-control">
+                                    <option value="0">Selecciona el destino del Recorrido</option>
+                                    <?php
+                                     include "modelo/conexion.php";
+
+                                     $consulta="SELECT * FROM ruta";
+                                     $ejecutar=mysqli_query($conexion,$consulta) or die(mysqli_error($conexion));
+
+
+                                     ?>
+                                     <?php foreach  ($ejecutar as $opciones):   ?>
+
+                                        <option value="<?php echo $opciones['destino_ruta']?>"><?php echo $opciones['destino_ruta']?></option>
+                                
+                                        <?php endforeach ?>   
+                                </select>
+                            </div>
+                        </div>
+                       <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <select class="form-select" aria-label="Default select example" name="placaf" class="form-control" required>
+                                    <option value="0">Selecciona la placa del bus</option>
+                                     <?php
+                                     include "modelo/conexion.php";
+
+                                     $consulta="SELECT * FROM buses";
+                                     $ejecutar=mysqli_query($conexion,$consulta) or die(mysqli_error($conexion));
+
+
+                                     ?>
+                                     <?php foreach  ($ejecutar as $opciones):   ?>
+
+                                        <option value="<?php echo $opciones['placa']?>"><?php echo $opciones['placa']?></option>
+                                
+                                        <?php endforeach ?>                                   
+                                </select>
+                            </div>
+                        </div> 
+                       
+                        <br>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <button  type="submit" class="btn btn-primary"
+                                    name="btnrutas" value="ok">Iniciar
+                                    ruta</a></button>
+                            </div>
+                        </div>
+
+                    </form>
                 </div>
+
             </div>
-
-
         </div>
+
+
     </div>
+                                </div>
+                                  
+    
+    
+    
+    
+   
+                            
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
     <footer class="sticky-footer">
@@ -241,5 +271,4 @@ session_start();
 
 
 </body>
-
 </html>

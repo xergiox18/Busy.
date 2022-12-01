@@ -1,7 +1,8 @@
 <?php
 //DESTRUIR LA SESION DE UN USUARIO LOGEADO AL MOMENTO DE CERRAR SESION
-/*session_start();*/
-
+session_start();
+if (empty($_SESSION["id"])){
+    header("location: page-login-2.php");}
 ?>
 
 
@@ -61,7 +62,7 @@
                     <li class="nav-item dropdown">
                     <ul class="user-area list-inline float-right margin-0px text-white">
                             <li class="list-inline-item  padding-right-10px"><?php
-                        /*echo $_SESSION["nombres"] . " " . $_SESSION["apellidos"];*/
+                        echo $_SESSION["nombres"] . " " . $_SESSION["apellidos"];
                         ?></li>
                      
                 

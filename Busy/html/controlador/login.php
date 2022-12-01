@@ -6,7 +6,7 @@ if(!empty($_POST["btningresar"])){
         $contraseña=$_POST["contraseña"];
         $sql=$conexion->query(" select * from usuario where correo_usuario='$correo' and contraseña_usuario='$contraseña'");
         if ($datos=$sql->fetch_object()) {
-            $_SESSION["correo"]=$datos->correo;
+            $_SESSION["id_usuario"]=$datos->id_usuario;
             header("location:perfil-admin.php");
 
         } else {

@@ -1,11 +1,3 @@
-<?php
-//DESTRUIR LA SESION DE UN USUARIO LOGEADO AL MOMENTO DE CERRAR SESION
-/*include "controlador/login.php";
-session_start();
-session_destroy();*/
-?>
-
-
 
 
 <!DOCTYPE html>
@@ -71,13 +63,9 @@ session_destroy();*/
                         <ul class="user-area list-inline float-right margin-0px text-white">
                             <li class="list-inline-item  padding-right-10px"><a href="page-login-2.php"><i
                                         class="fa fa-lock padding-right-5px"></i>login</a></li>
-                            <li class="list-inline-item  padding-right-10px"><a href="#"><i
-                                        class="fa fa-lock padding-right-5px"></i>
 
                                 </a>
-                                <?php
-                               /* echo $_SESSION["correo"];*/
-                                ?>
+
                             </li>
                         </ul>
                     </div>
@@ -284,7 +272,7 @@ session_destroy();*/
                             selecciona cancelar.</div>
                         <div class="modal-footer">
                             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                            <a class="btn btn-primary" href="controlador/login.php">Salir</a>
+                            <a class="btn btn-primary" href="controlador/cerrar_sesion.php">Salir</a>
                         </div>
                     </div>
                 </div>

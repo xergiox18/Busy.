@@ -15,11 +15,11 @@
     <img class="logo img-responsive" src="images/logo.png" alt="busy" height="65" width="300"><br/>
     <div class="form-group">
         <label for="concept">Concepto</label>
-        <input type="text" readonly value="Pasaje a tebaida" id="concept" name="concept" class="form-control" >
+        <input type="text" disabled value="Pasaje a tebaida" id="concept" name="concept" class="form-control" >
     </div>
     <div class="form-group">
         <label for="amount">Importe</label>
-        <input type="text" readonly value="9600" id="amount" name="amount" class="form-control">
+        <input type="text" disabled value="9600" id="amount" name="amount" class="form-control">
     </div>
     <a href="recibo-ticket.html"><input readonly class="btn btn-lg btn-primary btn-block" name="submitPayment"  value="Pagar"></a>
     <img class="img-responsive" src="img/paypal.png" alt="Pagos con PayPal y PHP" height="65" width="300"><br/>

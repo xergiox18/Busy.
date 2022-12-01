@@ -1,6 +1,7 @@
+
+
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <title>Travelz HTML5 Multipurpose Travel Template</title>
     <meta name="author" content="Nile-Theme">
@@ -227,7 +228,7 @@
                             <!-- item  -->
                             <div class="container margin-tb-15px">
                                 <table id="example" class="table table-striped table-bordered" cellspacing="0"
-                                    width="100%" style="font-size: 8px;">
+                                    width="100%" style="font-size: 12px;">
                                     <thead>
                                         <tr>
                                         <th>id</th>
@@ -307,7 +308,7 @@
                                 <div class="modal-footer">
                                     <button class="btn btn-secondary" type="button"
                                         data-dismiss="modal">Cancelar</button>
-                                    <a class="btn btn-primary" href="page-login-2.php">Salir</a>
+                                    <a class="btn btn-primary" href="controlador/cerrar_sesion.php">Salir</a>
                                 </div>
                             </div>
                         </div>
