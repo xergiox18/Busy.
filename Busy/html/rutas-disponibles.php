@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -25,33 +27,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/sticky-sidebar.js"></script>
 
-    <!-- REVOLUTION JS FILES -->
-    <script type="text/javascript" src="plugins/revslider_1/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="plugins/revslider_1/js/jquery.themepunch.revolution.min.js"></script>
-
-    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.actions.min.js"></script>
-    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.migration.min.js"></script>
-    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="plugins/revslider_1/js/extensions/revolution.extension.video.min.js"></script>
 
 </head>
 
 <body>
-    <!-- ======= Header  ======= -->
+    <!-- Header  -->
     <header class="background-white box-shadow">
         <div class="background-main-color padding-tb-5px">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm d-none d-sm-block text-white">Modern Creative Website ....</div>
+                    <div class="col-sm d-none d-sm-block text-white"></div>
                     <div class="col-sm">
                         <ul class="list-inline text-center margin-0px text-white">
                             <li class="list-inline-item"><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -66,7 +54,6 @@
                     <div class="col-sm d-none d-sm-block">
                         <ul class="user-area list-inline float-right margin-0px text-white">
                             <li class="list-inline-item  padding-right-10px"><a href="page-login-2.html"><i class="fa fa-lock padding-right-5px"></i>login</a></li>
-                            <li class="list-inline-item"><a href="page-login-1.html"><i class="fa fa-user-plus padding-right-5px"></i>register</a></li>
                         </ul>
                     </div>
                 </div>
@@ -80,9 +67,11 @@
                         <a class="mobile-toggle" href="#"><i class="fa fa-navicon"></i></a>
                     </div>
                     <div class="col-lg-9 position-inherit">
+
                         <ul id="menu-main" class="nav-menu float-right link-padding-tb-20px dropdown-dark">
                             <li class="active mega-menu mega-links mega-links-4columns"><a href="#">Home</a>
                                 <div class="mega-menu-out sub-menu-out">
+
                                     <ul class="sub-menu-columns">
                                         <li>
                                             <a href="#">demos one</a>
@@ -132,6 +121,7 @@
                                             </ul>
                                         </li>
                                     </ul>
+
                                 </div>
                             </li>
                             <li class="has-dropdown"><a class="dropdown" href="#">Features  </a>
@@ -276,6 +266,7 @@
                                     </li>
                                 </ul>
                             </li>
+
                             <li class="has-dropdown"><a href="#">Pages</a>
                                 <ul class="sub-menu">
                                     <li class="has-dropdown"><a href="#">about</a>
@@ -454,112 +445,115 @@
             </div>
         </div>
     </header>
-    <!-- ======= end Header  ======= -->
-
-    <!-- Page title --->
-    <section class="background-grey-1 padding-tb-35px text-grey-4">
+    <!-- // Header  -->
+    <!-- lista de rutas --->
+    <section class="background-grey-1 padding-tb-25px text-grey-4">
         <div class="container">
-            <h4 class="font-weight-300 text-uppercase float-left font-2">Right Sidebar</h4>
+            <h6 class="font-weight-300 text-capitalize float-md-left font-2 padding-tb-10px">Lista de rutas</h6>
             <ol class="breadcrumb z-index-2 position-relative no-background padding-tb-10px padding-lr-0px  margin-0px float-md-right">
-                <li><a href="#" class="text-grey-4">Home</a></li>
+                <li><a href="#" class="text-grey-4">Inicio</a></li>
                 <li><a href="#" class="text-grey-4">pages</a></li>
-                <li class="active">Right Sidebar</li>
+                <li class="active">Lista de rutas</li>
             </ol>
             <div class="clearfix"></div>
         </div>
     </section>
-    <!-- // Page title --->
-
 
     <!-- page output -->
     <div class="padding-tb-40px background-light-grey">
         <div class="container">
+
             <div class="row">
 
-
-                <!--  content -->
-                <div class="col-lg-8 col-md-8">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    <P>
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                        <br><br> The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-                    </P>
-                </div>
-                <!-- //  content -->
-
-                <!-- sidebar -->
-                <div class="col-lg-4 col-md-4">
-
-                    <!-- Mail list -->
+                <!-- Sidebar -->
+                <div class="col-lg-3 sticky-sidebar">
+                    <!-- Hotels Search -->
                     <div class="widget">
-                        <h4 class="widget-title clearfix"><span>Mail list</span></h4>
-                        <p>Mauris fermentum porta sem, non hendrerit enim bibendum consectetur. Fusce diam est, porttitor vehicula gravida faucibus, varius ante sit amet. </p>
-                        <input class="form-control rounded-0" type="text" placeholder="Default input">
-                        <a href="#" class="btn text-white text-uppercase text-small btn-block margin-top-15px background-grey-3 rounded-0 border-0">Subscribe now!</a>
-                    </div>
-                    <!-- //  Mail list -->
-
-
-                    <!-- widget categories -->
-                    <div class="widget widget_categories">
-                        <h4 class="widget-title clearfix"><span>categories</span></h4>
-                        <ul>
-                            <li><a href="#">Tech</a></li>
-                            <li><a href="#">Gallary</a></li>
-                            <li><a href="#">UI Design </a></li>
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="#">Wordpress  </a></li>
-                            <li><a href="#">Cultur</a></li>
-                        </ul>
-                    </div>
-                    <!-- //  widget categories -->
-
-                    <!-- widget Instgram -->
-                    <div class="widget widget_categories">
-                        <h4 class="widget-title clearfix"><span>Instgram</span></h4>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 margin-bottom-20px"><a href="#"><img src="http://placehold.it/400x400" alt=""></a></div>
-                            <div class="col-lg-6 col-md-6 margin-bottom-20px"><a href="#"><img src="http://placehold.it/400x400" alt=""></a></div>
-                            <div class="col-lg-6 col-md-6 margin-bottom-20px"><a href="#"><img src="http://placehold.it/400x400" alt=""></a></div>
-                            <div class="col-lg-6 col-md-6 margin-bottom-20px"><a href="#"><img src="http://placehold.it/400x400" alt=""></a></div>
+                        <h4 class="widget-title clearfix"><span>Buscar rutas</span></h4>
+                        <div class="search-filter">
+                            <div class="form-group margin-bottom-5px">
+                                <label>Desde</label>
+                                <div class="destination"><input type="text" class="input-text full-width" placeholder="Armenia"></div>
+                            </div>
+                            <div class="form-group margin-bottom-5px">
+                                <label>Hacia</label>
+                                <div class="destination"><input type="text" class="input-text full-width" placeholder="Su destino"></div>
+                            </div>
+                            <div class="form-group margin-bottom-5px">
+                                <label>Hora de salida</label>
+                                <div class="date-input"><input type="text" class="input-text datepicker full-width hasDatepicker" placeholder="15 / 5 / 2017"></div>
+                            </div>
+                           <!--
+                            <div class="form-group margin-bottom-5px">
+                                <label></label>
+                                <div class="date-input"><input type="text" class="input-text datepicker full-width hasDatepicker" placeholder="15 / 5 / 2017"></div>
+                            </div>-->
+                            <a href="#" class="btn-sm btn-lg btn-block background-main-color text-white text-center text-uppercase font-weight-600"><i class="fa fa-search"></i> Buscar</a>
                         </div>
                     </div>
-                    <!-- //  widget Instgram -->
-
-
-                    <!-- widget Top post -->
-                    <div class="widget">
-                        <h4 class="widget-title clearfix"><span>Top post</span></h4>
-                        <ul class="last-posts">
-                            <li>
-                                <a href="#" class="float-left margin-right-15px d-block width-60px"><img src="http://placehold.it/400x400" alt=""></a>
-                                <a href="#" class="d-block  text-uppercase text-medium text-dark font-weight-700">four days in las vegas</a>
-                                <span class="text-extra-small">Date :  <a href="#" class="text-main-color">July 15, 2016</a></span>
-                                <div class="clearfix"></div>
-                            </li>
-                            <li>
-                                <a href="#" class="float-left margin-right-15px d-block width-60px"><img src="http://placehold.it/400x400" alt=""></a>
-                                <a href="#" class="d-block  text-uppercase text-medium text-dark font-weight-700">Rome in 4 Days Easy Going</a>
-                                <span class="text-extra-small">Date :  <a href="#" class="text-main-color">July 15, 2016</a></span>
-                                <div class="clearfix"></div>
-                            </li>
-                            <li>
-                                <a href="#" class="float-left margin-right-15px d-block width-60px"><img src="http://placehold.it/400x400" alt=""></a>
-                                <a href="#" class="d-block  text-uppercase text-medium text-dark font-weight-700">Kuala Lumpur in Three Days</a>
-                                <span class="text-extra-small">Date :  <a href="#" class="text-main-color">July 15, 2016</a></span>
-                                <div class="clearfix"></div>
-                            </li>
-                        </ul>
-
-                    </div>
-                    <!-- //  widget Top post -->
 
 
                 </div>
-                <!-- // sidebar -->
+                <!-- //  Sidebar -->
 
+                <!-- Content -->
+                <div class="col-lg-9">
+
+                    <!-- flight post -->
+
+                    <?php
+
+include "modelo/conexion.php";
+$sql = $conexion->query(" select * from ruta ");
+while ($datos = $sql->fetch_object()) {  ?>  <div class="flight-post background-white border-bottom-1 border-grey-1 with-hover box-shadow-hover margin-bottom-40px">
+    <div class="row no-gutters">
+        <div class="col-lg-4">
+            <div class="hotel-img position-relative">
+                <img src="https://live.staticflickr.com/2559/4076835274_77bb5e1c5e_b.jpg" alt="">
+                <div class="hover-option background-main-color opacity-6">
+                    <h3 class="text-center text-white padding-top-n-25 "></h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="padding-20px">
+                <h3 class="text-uppercase text-medium font-weight-600"><a href="#" class="text-dark"><span class="margin-right-30px"><?=$datos->origen_ruta?></span>Hacia: <?=$datos->destino_ruta?> </a></h3>
+                <a href="index.php" class="float-lg-right btn-sm btn-lg background-grey-1 text-grey-2 text-center text-uppercase pull-top-30px">Comprar </a>
+                
+                <small class="text-uppercase text-extra-small margin-right-30px">
+                        <a href="#" class="text-grey-4"><i class="fa fa-chevron-up margin-right-5px"></i>
+                        Hora de salida :  <span class="text-third-color margin-right-5px"><?=$datos->horarios_ruta?></span> </a>
+                    </small>
+                    <button id="BotonSuma" class="plus" style="padding: 0; border: none; background: none; cursor: pointer; transition: all .5s;"><a href="mete_producto.php?id=12&nombre=tebaida&precio=4800" class="btn btn-" ><i class="fa fa-wifi icon-round-ba background-pink"></i></button></a>
+                <div class="claerfix"></div>
+                <div class="margin-top-8px padding-top-8px text-uppercase text-extra-small border-top-1 border-grey-1">
+                    <strong class="text-medium text-third-color padding-right-5px font-weight-bold">$<?=$datos->precio_ruta?></strong>
+                    <i class="d-block padding-tb-8px text-grey-2 float-lg-right"><span class="margin-right-40px">Rapido Quíndio</span></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>       
+
+<br>
+
+<?php }?>
+                   
+                    <!-- // flight post -->
+
+                    <ul class="pagination pagination-md ">
+                        <li class="page-item disabled"><a class="page-link rounded-0" href="#" tabindex="-1">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link rounded-0" href="#">Next</a></li>
+                    </ul>
+                </div>
+                <!-- //  Content -->
 
             </div>
+            <!--// row -->
+
         </div>
     </div>
     <!-- //  page output -->
