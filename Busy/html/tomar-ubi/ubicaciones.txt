@@ -1,0 +1,256 @@
+Timestamp: 1669852274799
+Latitud: 4.5409528
+Longitud: -75.6684825
+
+Timestamp: 1669852276798
+Latitud: 4.5409528
+Longitud: -75.6684825
+
+Timestamp: 1669853010611
+Latitud: 4.540913
+Longitud: -75.6684968
+
+Timestamp: 1669853018968
+Latitud: 4.540913
+Longitud: -75.6684968
+
+Timestamp: 1669853020620
+Latitud: 4.540913
+Longitud: -75.6684968
+
+Timestamp: 1669853020974
+Latitud: 4.540913
+Longitud: -75.6684968
+
+Timestamp: 1669853437573
+Latitud: 4.5409445
+Longitud: -75.6684246
+
+Timestamp: 1669853438808
+Latitud: 4.5409445
+Longitud: -75.6684246
+
+Timestamp: 1669853440823
+Latitud: 4.5409445
+Longitud: -75.6684246
+
+Timestamp: 1669853549714
+Latitud: 4.5409674
+Longitud: -75.668457
+
+Timestamp: 1669853551728
+Latitud: 4.5409674
+Longitud: -75.668457
+
+Timestamp: 1669853689276
+Latitud: 4.5409593
+Longitud: -75.668453
+
+Timestamp: 1669853691290
+Latitud: 4.5409593
+Longitud: -75.668453
+
+Timestamp: 1669853694542
+Latitud: 4.5409593
+Longitud: -75.668453
+
+Timestamp: 1669853696145
+Latitud: 4.5409593
+Longitud: -75.668453
+
+Timestamp: 1669854360126
+Latitud: 4.5409333
+Longitud: -75.6684591
+
+Timestamp: 1669854361261
+Latitud: 4.5409333
+Longitud: -75.6684591
+
+Timestamp: 1669855206471
+Latitud: 4.5409419
+Longitud: -75.6684651
+
+Timestamp: 1669855208030
+Latitud: 4.5409419
+Longitud: -75.6684651
+
+Timestamp: 1670269221738
+Latitud: 4.5272
+Longitud: -75.648
+
+Timestamp: 1670269289215
+Latitud: 4.5272
+Longitud: -75.648
+
+Timestamp: 1670269375213
+Latitud: 4.5272
+Longitud: -75.648
+
+Timestamp: 1670269375929
+Latitud: 4.5272
+Longitud: -75.648
+
+Timestamp: 1670269378681
+Latitud: 4.5272
+Longitud: -75.648
+
+Timestamp: 1670269379391
+Latitud: 4.5272
+Longitud: -75.648
+
+Timestamp: 1670269396846
+Latitud: 4.5272
+Longitud: -75.648
+
+Timestamp: 1670269397637
+Latitud: 4.5272
+Longitud: -75.648
+
+Timestamp: 1670269398736
+Latitud: 4.5272
+Longitud: -75.648
+
+Timestamp: 1670269399285
+Latitud: 4.5272
+Longitud: -75.648
+
+Timestamp: 1670269640770
+Latitud: 4.5272
+Longitud: -75.648
+
+Timestamp: 1670270459641
+Latitud: 6.2470762
+Longitud: -75.6120795
+
+Timestamp: 1670270461641
+Latitud: 6.2470762
+Longitud: -75.6120795
+
+Timestamp: 1670270470680
+Latitud: 6.2470762
+Longitud: -75.6120795
+
+Timestamp: 1670270545014
+Latitud: 4.5414291
+Longitud: -75.686384
+
+Timestamp: 1670270547024
+Latitud: 4.5414291
+Longitud: -75.686384
+
+Timestamp: 1670270594161
+Latitud: 4.5414291
+Longitud: -75.686384
+
+Timestamp: 1670270596175
+Latitud: 4.5414291
+Longitud: -75.686384
+
+Timestamp: 1670274334491
+Latitud: 6.2470762
+Longitud: -75.6120795
+
+Timestamp: 1670274336499
+Latitud: 6.2470762
+Longitud: -75.6120795
+
+Timestamp: 1670274354847
+Latitud: 6.2470762
+Longitud: -75.6120795
+
+Timestamp: 1670274356848
+Latitud: 6.2470762
+Longitud: -75.6120795
+
+Timestamp: 1670274367233
+Latitud: 6.2470762
+Longitud: -75.6120795
+
+Timestamp: 1670274369237
+Latitud: 6.2470762
+Longitud: -75.6120795
+
+Timestamp: 1670274374994
+Latitud: 6.2470762
+Longitud: -75.6120795
+
+Timestamp: 1670274377001
+Latitud: 6.2470762
+Longitud: -75.6120795
+
+Timestamp: 1670274377238
+Latitud: 6.2470762
+Longitud: -75.6120795
+
+Timestamp: 1670274397114
+Latitud: 6.2470762
+Longitud: -75.6120795
+
+Timestamp: 1670274399117
+Latitud: 6.2470762
+Longitud: -75.6120795
+
+Timestamp: 1670274407120
+Latitud: 4.5414368
+Longitud: -75.6863824
+
+Timestamp: 1670274428220
+Latitud: 4.5414368
+Longitud: -75.6863824
+
+Timestamp: 1670274430219
+Latitud: 4.5414368
+Longitud: -75.6863824
+
+Timestamp: 1670274724021
+Latitud: 4.5414315
+Longitud: -75.686383
+
+Timestamp: 1670274726024
+Latitud: 4.5414315
+Longitud: -75.686383
+
+Timestamp: 1670281380784
+Latitud: 4.5412838
+Longitud: -75.6681313
+
+Timestamp: 1670281422338
+Latitud: 4.5412651
+Longitud: -75.6681704
+
+Timestamp: 1670284688413
+Latitud: 6.2486069
+Longitud: -75.5742467
+
+Timestamp: 1670284690422
+Latitud: 6.2486069
+Longitud: -75.5742467
+
+Timestamp: 1670284713655
+Latitud: 6.2486069
+Longitud: -75.5742467
+
+Timestamp: 1670284715655
+Latitud: 6.2486069
+Longitud: -75.5742467
+
+Timestamp: 1670284761357
+Latitud: 6.2486069
+Longitud: -75.5742467
+
+Timestamp: 1670284763365
+Latitud: 6.2486069
+Longitud: -75.5742467
+
+Timestamp: 1670371961337
+Latitud: 4.5409738
+Longitud: -75.6685225
+
+Timestamp: 1670374174129
+Latitud: 4.5410005
+Longitud: -75.6685145
+
+Timestamp: 1670374176143
+Latitud: 4.5410005
+Longitud: -75.6685145
+

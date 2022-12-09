@@ -3,7 +3,7 @@
 <html lang="en-US">
 
 <head>
-    <title>Travelz HTML5 Multipurpose Travel Template</title>
+    <title>Busy</title>
     <meta name="author" content="Nile-Theme">
     <meta name="robots" content="index follow">
     <meta name="googlebot" content="index follow">
@@ -147,11 +147,26 @@
                 <i class="fa fa-fw fa-star"></i>
                 <span class="nav-link-text">Registro de Rutas</span>
             </a>
+            
                         </li>
+
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                            <a class="nav-link" href="registro_willis.php">
+                <i class="fa fa-fw fa-star"></i>
+                <span class="nav-link-text">Registro de willis</span>
+            </a>
+                        </li>
+
                         <li class="nav-item" data-toggle="tooltip" data-placement="right">
                             <a class="nav-link" href="registro_conductores.php">
                 <i class="fa fa-fw fa-user-circle"></i>
                 <span class="nav-link-text">Registrar conductor</span>
+            </a>
+                        </li>
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                            <a class="nav-link" href="registro_privados.php">
+                <i class="fa fa-fw fa-user-circle"></i>
+                <span class="nav-link-text">Registro de buses privados</span>
             </a>
                         </li>
                         <li class="nav-item" data-toggle="tooltip" data-placement="right">
@@ -170,6 +185,12 @@
                             <a class="nav-link" href="tabla-rutas.php">
                                 <i class="fa fa-fw" aria-hidden="true"></i>
                                 <span class="nav-link-text">Tabla de rutas </span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                            <a class="nav-link" href="tabla-willis.php">
+                                <i class="fa fa-fw" aria-hidden="true"></i>
+                                <span class="nav-link-text">Tabla de willis </span>
                             </a>
                         </li>
 

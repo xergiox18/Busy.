@@ -9,7 +9,7 @@ if (empty($_SESSION["id"])) {
 <html lang="en-US">
 
 <head>
-    <title>Travelz HTML5 Multipurpose Travel Template</title>
+    <title>Busy</title>
     <meta name="author" content="Nile-Theme">
     <meta name="robots" content="index follow">
     <meta name="googlebot" content="index follow">
@@ -92,50 +92,12 @@ if (empty($_SESSION["id"])) {
 
             <div class="row padding-top-50px">
 
-                <div class="col-lg-4 col-md-6 margin-bottom-30px">
-                    <a class="d-block padding-20px background-orange">
-                        <h6 class="text-white margin-0px font-weight-400">
-                            <i class="fa fa-building-o text-title-large margin-bottom-10px opacity-5 d-block"></i>
-                            <span class="font-3">150</span>
-                            <span class="margin-left-10px">Booking of hotels</span>
-                        </h6>
-                    </a>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 margin-bottom-30px">
-                    <a class="d-block padding-20px background-second-color">
-                        <h6 class="text-white margin-0px font-weight-400">
-                            <i class="fa fa-automobile text-title-large margin-bottom-10px opacity-5 d-block"></i>
-                            <span class="font-3">150</span>
-                            <span class="margin-left-10px">Car Rental</span>
-                        </h6>
-                    </a>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 margin-bottom-30px">
-                    <a class="d-block padding-20px background-lime">
-                        <h6 class="text-white margin-0px font-weight-400">
-                            <i class="fa fa-plane text-title-large margin-bottom-10px opacity-5 d-block"></i>
-                            <span class="font-3">150</span>
-                            <span class="margin-left-10px">Booking Flight</span>
-                        </h6>
-                    </a>
-                </div>
-
 
                 <div class="col-12">
 
                     <div class="alert alert-success">
-                        <strong>Success!</strong> Indicates a successful or positive action.
+                        <strong>Compra realizada</strong> Maria compró 2 tiquetes para tu vehiculo.
                     </div>
-
-                    <div class="alert alert-danger">
-                        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
-                    </div>
-
-                    <!-- -->
 
                     <!-- -->
 <!-- Termina la definición del menú -->
@@ -168,7 +130,7 @@ if (empty($_SESSION["id"])) {
         <footer class="sticky-footer">
             <div class="container">
                 <div class="text-center">
-                    <small>Copyright © Your Website 2017</small>
+                    <small>Copyright © Busy 2022</small>
                 </div>
             </div>
         </footer>

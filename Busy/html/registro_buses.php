@@ -3,7 +3,7 @@
 
 
 <head>
-    <title>Travelz HTML5 Multipurpose Travel Template</title>
+    <title>Busy</title>
     <meta name="author" content="Nile-Theme">
     <meta name="robots" content="index follow">
     <meta name="googlebot" content="index follow">
@@ -167,6 +167,18 @@
                             </a>
                         </li>
                         <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                            <a class="nav-link" href="registro_privados.php">
+                            <i class="fa fa-fw fa-star"></i>
+                <span class="nav-link-text">Registro de buses privados</span>
+            </a>
+                        </li>
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                            <a class="nav-link" href="registro_willis.php">
+                <i class="fa fa-fw fa-star"></i>
+                <span class="nav-link-text">Registro de willis</span>
+            </a>
+                        </li>
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right">
                             <a class="nav-link" href="tabla-conductores.php">
                                 <i class="fa fa-fw" aria-hidden="true"></i>
                                 <span class="nav-link-text">Tabla conductores</span>
@@ -185,8 +197,19 @@
                                 <span class="nav-link-text">Tabla de rutas </span>
                             </a>
                         </li>
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                            <a class="nav-link" href="tabla-willis.php">
+                                <i class="fa fa-fw" aria-hidden="true"></i>
+                                <span class="nav-link-text">Tabla de willis </span>
+                            </a>
                         </li>
                        
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                            <a class="nav-link" href="tabla-privados.php">
+                                <i class="fa fa-fw" aria-hidden="true"></i>
+                                <span class="nav-link-text">Tabla de buses privados </span>
+                            </a>
+                        </li>
 
 
 
@@ -288,32 +311,32 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer id="footer" class="text-center text-lg-left">
-
+    <!-- ======= footer  ======= -->
+    <footer class="text-center text-lg-left">
         <div class="container">
-            <div class="row padding-tb-35px">
+            <div class="row padding-tb-100px">
+                <div class="col-lg-6 sm-mb-35px">
+                    <div class="about">
+                        <div class="logo margin-bottom-20px"><a href="#"><img src="images/logo.png" alt=""></a></div>
+                        <p class="text-grey-2">
+                            Busy es una página web para la compra de tiquetes de bus en el departamento del Quindío y para mostrar los atractivos de sus municipios.
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row padding-tb-30px border-top-1 border-grey-1">
                 <div class="col-lg-4">
-                    <p class="text-sm-center text-lg-left"><span class="text-third-color">Busy</span> | @2017 All copy
-                        rights reserved</p>
+                    <p class="text-lg-left"><span class="text-third-color">Busy</span> | @2022</p>
                 </div>
                 <div class="col-lg-4 sm-mb-20px">
                     <div class="text-center"><img src="images/cards.png" alt=""></div>
                 </div>
                 <div class="col-lg-4">
                     <ul class="social_link list-inline text-sm-center text-lg-right">
-                        <li class="list-inline-item"><a class="facebook" href="#"><i class="fa fa-facebook"
-                                    aria-hidden="true"></i></a></li>
-                        <li class="list-inline-item"><a class="youtube" href="#"><i class="fa fa-youtube-play"
-                                    aria-hidden="true"></i></a></li>
-                        <li class="list-inline-item"><a class="linkedin" href="#"><i class="fa fa-linkedin"
-                                    aria-hidden="true"></i></a></li>
-                        <li class="list-inline-item"><a class="google" href="#"><i class="fa fa-google-plus"
-                                    aria-hidden="true"></i></a></li>
-                        <li class="list-inline-item"><a class="twitter" href="#"><i class="fa fa-twitter"
-                                    aria-hidden="true"></i></a></li>
-                        <li class="list-inline-item"><a class="rss" href="#"><i class="fa fa-rss"
-                                    aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a class="youtube" href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a class="linkedin" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                     </ul>
                     <!-- // Social -->
                 </div>
@@ -322,7 +345,7 @@
         </div>
 
     </footer>
-    <!-- // Footer -->
+    <!-- ======= end footer  ======= -->
     <script type="text/javascript" src="js/custom.js"></script>
     <script type="text/javascript" src="js/sticky-sidebar.js"></script>
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>

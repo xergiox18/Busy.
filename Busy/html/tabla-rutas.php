@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <title>Travelz HTML5 Multipurpose Travel Template</title>
+    <title>Busy</title>
     <meta name="author" content="Nile-Theme">
     <meta name="robots" content="index follow">
     <meta name="googlebot" content="index follow">
@@ -182,6 +182,18 @@
                             </a>
                         </li>
                         <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                            <a class="nav-link" href="registro_willis.php">
+                <i class="fa fa-fw fa-star"></i>
+                <span class="nav-link-text">Registro de willis</span>
+            </a>
+                        </li>
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                            <a class="nav-link" href="registro_privados.php">
+                            <i class="fa fa-fw fa-star"></i>
+                <span class="nav-link-text">Registro de buses privados</span>
+            </a>
+                        </li>
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right">
                             <a class="nav-link" href="tabla-conductores.php">
                                 <i class="fa fa-fw" aria-hidden="true"></i>
                                 <span class="nav-link-text">Tabla conductores</span>
@@ -197,6 +209,18 @@
                             <a class="nav-link" href="tabla-rutas.php">
                                 <i class="fa fa-fw" aria-hidden="true"></i>
                                 <span class="nav-link-text">Tabla de rutas </span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                            <a class="nav-link" href="tabla-willis.php">
+                                <i class="fa fa-fw" aria-hidden="true"></i>
+                                <span class="nav-link-text">Tabla de willis </span>
+                            </a>
+                        </li>
+                        <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                            <a class="nav-link" href="tabla-privados.php">
+                                <i class="fa fa-fw" aria-hidden="true"></i>
+                                <span class="nav-link-text">Tabla de buses privados </span>
                             </a>
                         </li>
                        
@@ -237,6 +261,7 @@
                                             <th>horarios</th>
                                             <th>intervalos de ruta</th>
                                             <th>precio del pasaje</th>
+                                            <th>Foto</th>
                                             <th></th>
                                             <th></th>
                                         </tr>
@@ -249,31 +274,36 @@
                                         include "modelo/conexion.php";
                                         include "controlador/eliminar-ruta.php";
                                         $sql = $conexion->query(" select * from ruta ");
-                                        while ($datos = $sql->fetch_object()) { ?>
+                                        while ($row = $sql->fetch_assoc()) { ?>
                                         <tr>
                                             <td>
-                                                <?= $datos->id_ruta ?>
+                                                <?php echo $row ['id_ruta'] ?>
                                             </td>
                                             <td>
-                                                <?= $datos->origen_ruta ?>
+                                            <?php echo $row ['origen_ruta'] ?>
                                             </td>
                                             <td>
-                                                <?= $datos->destino_ruta ?>
+                                            <?php echo $row ['destino_ruta'] ?>
                                             </td>
                                             <td>
-                                                <?= $datos->horarios_ruta ?>
+                                            <?php echo $row ['horarios_ruta'] ?>
                                             </td>
                                             <td>
-                                                <?= $datos->intervalo_ruta ?>
+                                            <?php echo $row ['intervalo_ruta'] ?>
                                             </td>
                                             <td>
-                                                <?= $datos->precio_ruta ?>
+                                            <?php echo $row ['precio_ruta'] ?>
+                                            </td>
+                                            
+                                            <td>
+                                            <img height="70px" src="data:image;base64,<?php echo base64_encode($row['img']);  ?>" >
                                             </td>
 
+                                            
                                         
-                                            <td> <a href="modificar_rutas.php?id=<?= $datos->id_ruta ?>" class="btn btn-small btn-warning"><i
+                                            <td> <a href="modificar_rutas.php?id=<?php echo $row ['id_ruta'] ?>" class="btn btn-small btn-warning"><i
                                                         class="fa-solid fa-pen-to-square"></i></a></td>
-                                            <td> <a onclick="return eliminar()" href="tabla-buses.php?id=<?= $datos->id_ruta?>"
+                                            <td> <a onclick="return eliminar()" href="tabla-rutas.php?id=<?php echo $row ['id_ruta'] ?>"
                                                     class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a></td>
                                         </tr>
                                         <?php } ?>

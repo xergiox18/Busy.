@@ -1,0 +1,17 @@
+{
+    "python.defaultInterpreterPath": "C:\\Users\\David\\AppData\\Local\\Microsoft\\WindowsApps\\python3.7.exe",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "files.autoSave": "afterDelay",
+    "explorer.confirmDelete": false,
+    "php.validate.executablePath": "",
+    "php.suggest.basic": false,
+    "php.validate.enable": false,
+    "emmet.excludeLanguages": [
+        "markdown",
+        "php"
+    ],
+    "php.executables": {
+    
+    }
+}
