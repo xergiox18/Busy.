@@ -54,7 +54,7 @@
                 <div class="col-lg-4">
 
                     <div class="text-center margin-bottom-30px">
-                        <a href="#"><img src="images/logo.png" alt=""></a>
+                        <a href="01-home.html"><img src="images/logo.png" alt=""></a>
                     </div>
 
                     <div class="padding-30px background-white border-1 border-grey-1">

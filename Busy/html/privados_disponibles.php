@@ -42,11 +42,7 @@
                     
                         <!-- // Social -->
                     
-                    <div class="col-sm d-none d-sm-block">
-                        <ul class="user-area list-inline float-right margin-0px text-white">
-                            <li class="list-inline-item  padding-right-10px"><a href="page-login-2.php"><i class="fa fa-lock padding-right-5px"></i>login</a></li>
-                        </ul>
-                    </div>
+                   
                 </div>
             </div>
         </div>

@@ -62,11 +62,7 @@
                     
                         <!-- // Social -->
                     
-                    <div class="col-sm d-none d-sm-block">
-                        <ul class="user-area list-inline float-right margin-0px text-white">
-                            <li class="list-inline-item  padding-right-10px"><a href="page-login-2.php"><i class="fa fa-lock padding-right-5px"></i>login</a></li>
-                        </ul>
-                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -126,6 +122,13 @@
                     .map{
                         width: 800px;
                         height: 500px;
+                        margin: 0 auto;
+                    }
+                    #ubia{
+                        color: #000;
+                        text-align: center;
+                        padding-top: 10px;
+                        margin: 0;
                     }
                 </style>
             </div>
@@ -142,7 +145,7 @@ $db_nombre="busy";
 
 $db_usuario="root";
 
-$db_password="usbw";
+$db_password="";
 
 
 $conexion = mysqli_connect($db_host,$db_usuario,$db_password,$db_nombre);
@@ -166,12 +169,12 @@ $resultado = mysqli_query($conexion, $usuario);
     // Justo aquí estamos pasando la variable ----^
     // Y ya la tenemos desde JavaScript. Podemos hacer cualquier cosa con ella
     
-    //document.write(longitude +"," + latitude);
+    //document.write(longitude +"," + latitude); 
 </script>
-<h1>Ubicación ruta</h1>
+<h1 id="ubia">Ubicación ruta</h1>
 <br>
 
-<div id="map" class="map" style="position:relative; left:320px;"></div>
+<div id="map" class="map" style="position:relative;"></div>
 
 <script>
         //Aqui se encuentran todos los mapas
